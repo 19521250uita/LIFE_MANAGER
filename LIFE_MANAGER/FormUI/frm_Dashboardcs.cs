@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -178,6 +179,29 @@ namespace LIFE_MANAGER.FormUI
         private void btn_Close_Click(object sender, EventArgs e)
         {
             Reset();
+        }
+
+        private void btn_Logout_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Are you sure you want to logout", "Logout ?", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                frm_Login.User = null;
+                Thread a = new Thread(() => new frm_Login().ShowDialog());
+                a.SetApartmentState(ApartmentState.STA);
+                a.Start();
+                this.Close();
+            }
+            
+        }
+
+        private void btn_Quit_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Are you sure you want to quit", "Quit ?",MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                this.Close();
+            }
         }
     }
 }

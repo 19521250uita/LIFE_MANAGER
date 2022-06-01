@@ -36,12 +36,12 @@ namespace LIFE_MANAGER.FormUI
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tb_Name = new System.Windows.Forms.TextBox();
             this.tb_Date = new System.Windows.Forms.TextBox();
-            this.tb_Biography = new System.Windows.Forms.TextBox();
-            this.roundedButton1 = new LIFE_MANAGER.Custom_Control.RoundedButton();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btn_Register = new LIFE_MANAGER.Custom_Control.RoundedButton();
+            this.tb_Username = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.tb_Password = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.rtb_Biography = new System.Windows.Forms.RichTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -89,49 +89,47 @@ namespace LIFE_MANAGER.FormUI
             // 
             // tb_Name
             // 
+            this.tb_Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_Name.Location = new System.Drawing.Point(544, 95);
             this.tb_Name.Name = "tb_Name";
-            this.tb_Name.Size = new System.Drawing.Size(158, 22);
-            this.tb_Name.TabIndex = 15;
+            this.tb_Name.Size = new System.Drawing.Size(319, 30);
+            this.tb_Name.TabIndex = 1;
             // 
             // tb_Date
             // 
+            this.tb_Date.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_Date.Location = new System.Drawing.Point(544, 133);
             this.tb_Date.Name = "tb_Date";
-            this.tb_Date.Size = new System.Drawing.Size(158, 22);
-            this.tb_Date.TabIndex = 17;
+            this.tb_Date.Size = new System.Drawing.Size(319, 30);
+            this.tb_Date.TabIndex = 2;
             // 
-            // tb_Biography
+            // btn_Register
             // 
-            this.tb_Biography.Location = new System.Drawing.Point(544, 254);
-            this.tb_Biography.Name = "tb_Biography";
-            this.tb_Biography.Size = new System.Drawing.Size(158, 22);
-            this.tb_Biography.TabIndex = 19;
+            this.btn_Register.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btn_Register.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.btn_Register.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btn_Register.BorderRadius = 40;
+            this.btn_Register.BorderSize = 0;
+            this.btn_Register.FlatAppearance.BorderSize = 0;
+            this.btn_Register.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Register.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Register.ForeColor = System.Drawing.Color.White;
+            this.btn_Register.Location = new System.Drawing.Point(745, 443);
+            this.btn_Register.Name = "btn_Register";
+            this.btn_Register.Size = new System.Drawing.Size(118, 40);
+            this.btn_Register.TabIndex = 20;
+            this.btn_Register.Text = "Create";
+            this.btn_Register.TextColor = System.Drawing.Color.White;
+            this.btn_Register.UseVisualStyleBackColor = false;
+            this.btn_Register.Click += new System.EventHandler(this.btn_Register_Click);
             // 
-            // roundedButton1
+            // tb_Username
             // 
-            this.roundedButton1.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.roundedButton1.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.roundedButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.roundedButton1.BorderRadius = 40;
-            this.roundedButton1.BorderSize = 0;
-            this.roundedButton1.FlatAppearance.BorderSize = 0;
-            this.roundedButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundedButton1.ForeColor = System.Drawing.Color.White;
-            this.roundedButton1.Location = new System.Drawing.Point(481, 317);
-            this.roundedButton1.Name = "roundedButton1";
-            this.roundedButton1.Size = new System.Drawing.Size(118, 40);
-            this.roundedButton1.TabIndex = 20;
-            this.roundedButton1.Text = "Create";
-            this.roundedButton1.TextColor = System.Drawing.Color.White;
-            this.roundedButton1.UseVisualStyleBackColor = false;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(544, 173);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(158, 22);
-            this.textBox1.TabIndex = 22;
+            this.tb_Username.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_Username.Location = new System.Drawing.Point(544, 173);
+            this.tb_Username.Name = "tb_Username";
+            this.tb_Username.Size = new System.Drawing.Size(319, 30);
+            this.tb_Username.TabIndex = 3;
             // 
             // label1
             // 
@@ -144,12 +142,13 @@ namespace LIFE_MANAGER.FormUI
             this.label1.TabIndex = 21;
             this.label1.Text = "User : ";
             // 
-            // textBox2
+            // tb_Password
             // 
-            this.textBox2.Location = new System.Drawing.Point(544, 215);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(158, 22);
-            this.textBox2.TabIndex = 24;
+            this.tb_Password.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_Password.Location = new System.Drawing.Point(544, 215);
+            this.tb_Password.Name = "tb_Password";
+            this.tb_Password.Size = new System.Drawing.Size(319, 30);
+            this.tb_Password.TabIndex = 4;
             // 
             // label5
             // 
@@ -162,18 +161,27 @@ namespace LIFE_MANAGER.FormUI
             this.label5.TabIndex = 23;
             this.label5.Text = "Pass : ";
             // 
+            // rtb_Biography
+            // 
+            this.rtb_Biography.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rtb_Biography.Location = new System.Drawing.Point(544, 254);
+            this.rtb_Biography.Name = "rtb_Biography";
+            this.rtb_Biography.Size = new System.Drawing.Size(319, 132);
+            this.rtb_Biography.TabIndex = 24;
+            this.rtb_Biography.Text = "";
+            // 
             // frm_Register
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.ForestGreen;
-            this.ClientSize = new System.Drawing.Size(750, 380);
-            this.Controls.Add(this.textBox2);
+            this.ClientSize = new System.Drawing.Size(930, 558);
+            this.Controls.Add(this.rtb_Biography);
+            this.Controls.Add(this.tb_Password);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tb_Username);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.roundedButton1);
-            this.Controls.Add(this.tb_Biography);
+            this.Controls.Add(this.btn_Register);
             this.Controls.Add(this.tb_Date);
             this.Controls.Add(this.tb_Name);
             this.Controls.Add(this.label4);
@@ -196,11 +204,11 @@ namespace LIFE_MANAGER.FormUI
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox tb_Name;
         private System.Windows.Forms.TextBox tb_Date;
-        private System.Windows.Forms.TextBox tb_Biography;
-        private Custom_Control.RoundedButton roundedButton1;
-        private System.Windows.Forms.TextBox textBox1;
+        private Custom_Control.RoundedButton btn_Register;
+        private System.Windows.Forms.TextBox tb_Username;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox tb_Password;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.RichTextBox rtb_Biography;
     }
 }

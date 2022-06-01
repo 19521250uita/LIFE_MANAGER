@@ -31,14 +31,15 @@ namespace LIFE_MANAGER.FormUI
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Profile));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.lb_ID = new System.Windows.Forms.Label();
-            this.lb_Ngaysinh = new System.Windows.Forms.Label();
-            this.lb_tieusu = new System.Windows.Forms.Label();
-            this.lb_hoten = new System.Windows.Forms.Label();
+            this.lb_Name = new System.Windows.Forms.Label();
+            this.lb_Bio = new System.Windows.Forms.Label();
+            this.lb_Date = new System.Windows.Forms.Label();
+            this.lb_Id = new System.Windows.Forms.Label();
+            this.tb_Name = new System.Windows.Forms.TextBox();
+            this.tb_Id = new System.Windows.Forms.TextBox();
+            this.tb_Date = new System.Windows.Forms.TextBox();
+            this.rtb_Bio = new System.Windows.Forms.RichTextBox();
+            this.btn_SaveChanges = new LIFE_MANAGER.Custom_Control.RoundedButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -51,93 +52,102 @@ namespace LIFE_MANAGER.FormUI
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // label2
+            // lb_Name
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label2.Location = new System.Drawing.Point(394, 72);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(85, 25);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Họ tên : ";
+            this.lb_Name.AutoSize = true;
+            this.lb_Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_Name.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lb_Name.Location = new System.Drawing.Point(394, 72);
+            this.lb_Name.Name = "lb_Name";
+            this.lb_Name.Size = new System.Drawing.Size(85, 25);
+            this.lb_Name.TabIndex = 2;
+            this.lb_Name.Text = "Họ tên : ";
             // 
-            // label3
+            // lb_Bio
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label3.Location = new System.Drawing.Point(394, 215);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(93, 25);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Tiểu sử : ";
+            this.lb_Bio.AutoSize = true;
+            this.lb_Bio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_Bio.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lb_Bio.Location = new System.Drawing.Point(394, 215);
+            this.lb_Bio.Name = "lb_Bio";
+            this.lb_Bio.Size = new System.Drawing.Size(93, 25);
+            this.lb_Bio.TabIndex = 3;
+            this.lb_Bio.Text = "Tiểu sử : ";
             // 
-            // label4
+            // lb_Date
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label4.Location = new System.Drawing.Point(394, 165);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(115, 25);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "Ngày sinh : ";
+            this.lb_Date.AutoSize = true;
+            this.lb_Date.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_Date.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lb_Date.Location = new System.Drawing.Point(394, 165);
+            this.lb_Date.Name = "lb_Date";
+            this.lb_Date.Size = new System.Drawing.Size(115, 25);
+            this.lb_Date.TabIndex = 4;
+            this.lb_Date.Text = "Ngày sinh : ";
             // 
-            // label5
+            // lb_Id
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label5.Location = new System.Drawing.Point(394, 120);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(47, 25);
-            this.label5.TabIndex = 5;
-            this.label5.Text = "ID : ";
+            this.lb_Id.AutoSize = true;
+            this.lb_Id.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_Id.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lb_Id.Location = new System.Drawing.Point(394, 120);
+            this.lb_Id.Name = "lb_Id";
+            this.lb_Id.Size = new System.Drawing.Size(47, 25);
+            this.lb_Id.TabIndex = 5;
+            this.lb_Id.Text = "ID : ";
             // 
-            // lb_ID
+            // tb_Name
             // 
-            this.lb_ID.AutoSize = true;
-            this.lb_ID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_ID.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lb_ID.Location = new System.Drawing.Point(521, 120);
-            this.lb_ID.Name = "lb_ID";
-            this.lb_ID.Size = new System.Drawing.Size(47, 25);
-            this.lb_ID.TabIndex = 9;
-            this.lb_ID.Text = "ID : ";
+            this.tb_Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_Name.Location = new System.Drawing.Point(520, 72);
+            this.tb_Name.Name = "tb_Name";
+            this.tb_Name.Size = new System.Drawing.Size(258, 30);
+            this.tb_Name.TabIndex = 6;
             // 
-            // lb_Ngaysinh
+            // tb_Id
             // 
-            this.lb_Ngaysinh.AutoSize = true;
-            this.lb_Ngaysinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_Ngaysinh.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lb_Ngaysinh.Location = new System.Drawing.Point(521, 165);
-            this.lb_Ngaysinh.Name = "lb_Ngaysinh";
-            this.lb_Ngaysinh.Size = new System.Drawing.Size(115, 25);
-            this.lb_Ngaysinh.TabIndex = 8;
-            this.lb_Ngaysinh.Text = "Ngày sinh : ";
+            this.tb_Id.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_Id.Location = new System.Drawing.Point(520, 117);
+            this.tb_Id.Name = "tb_Id";
+            this.tb_Id.ReadOnly = true;
+            this.tb_Id.Size = new System.Drawing.Size(258, 30);
+            this.tb_Id.TabIndex = 7;
             // 
-            // lb_tieusu
+            // tb_Date
             // 
-            this.lb_tieusu.AutoSize = true;
-            this.lb_tieusu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_tieusu.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lb_tieusu.Location = new System.Drawing.Point(521, 215);
-            this.lb_tieusu.Name = "lb_tieusu";
-            this.lb_tieusu.Size = new System.Drawing.Size(93, 25);
-            this.lb_tieusu.TabIndex = 7;
-            this.lb_tieusu.Text = "Tiểu sử : ";
+            this.tb_Date.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_Date.Location = new System.Drawing.Point(520, 165);
+            this.tb_Date.Name = "tb_Date";
+            this.tb_Date.Size = new System.Drawing.Size(258, 30);
+            this.tb_Date.TabIndex = 8;
             // 
-            // lb_hoten
+            // rtb_Bio
             // 
-            this.lb_hoten.AutoSize = true;
-            this.lb_hoten.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_hoten.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lb_hoten.Location = new System.Drawing.Point(521, 72);
-            this.lb_hoten.Name = "lb_hoten";
-            this.lb_hoten.Size = new System.Drawing.Size(85, 25);
-            this.lb_hoten.TabIndex = 6;
-            this.lb_hoten.Text = "Họ tên : ";
+            this.rtb_Bio.Location = new System.Drawing.Point(520, 215);
+            this.rtb_Bio.Name = "rtb_Bio";
+            this.rtb_Bio.Size = new System.Drawing.Size(258, 168);
+            this.rtb_Bio.TabIndex = 9;
+            this.rtb_Bio.Text = "";
+            // 
+            // btn_SaveChanges
+            // 
+            this.btn_SaveChanges.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btn_SaveChanges.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.btn_SaveChanges.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btn_SaveChanges.BorderRadius = 40;
+            this.btn_SaveChanges.BorderSize = 0;
+            this.btn_SaveChanges.FlatAppearance.BorderSize = 0;
+            this.btn_SaveChanges.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_SaveChanges.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_SaveChanges.ForeColor = System.Drawing.Color.White;
+            this.btn_SaveChanges.Location = new System.Drawing.Point(557, 402);
+            this.btn_SaveChanges.Name = "btn_SaveChanges";
+            this.btn_SaveChanges.Size = new System.Drawing.Size(221, 46);
+            this.btn_SaveChanges.TabIndex = 10;
+            this.btn_SaveChanges.Text = "Save changes";
+            this.btn_SaveChanges.TextColor = System.Drawing.Color.White;
+            this.btn_SaveChanges.UseVisualStyleBackColor = false;
+            this.btn_SaveChanges.Click += new System.EventHandler(this.btn_SaveChanges_Click);
             // 
             // frm_Profile
             // 
@@ -145,14 +155,15 @@ namespace LIFE_MANAGER.FormUI
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
             this.ClientSize = new System.Drawing.Size(853, 480);
-            this.Controls.Add(this.lb_ID);
-            this.Controls.Add(this.lb_Ngaysinh);
-            this.Controls.Add(this.lb_tieusu);
-            this.Controls.Add(this.lb_hoten);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.btn_SaveChanges);
+            this.Controls.Add(this.rtb_Bio);
+            this.Controls.Add(this.tb_Date);
+            this.Controls.Add(this.tb_Id);
+            this.Controls.Add(this.tb_Name);
+            this.Controls.Add(this.lb_Id);
+            this.Controls.Add(this.lb_Date);
+            this.Controls.Add(this.lb_Bio);
+            this.Controls.Add(this.lb_Name);
             this.Controls.Add(this.pictureBox1);
             this.Name = "frm_Profile";
             this.Text = "Profile";
@@ -166,13 +177,14 @@ namespace LIFE_MANAGER.FormUI
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label lb_ID;
-        private System.Windows.Forms.Label lb_Ngaysinh;
-        private System.Windows.Forms.Label lb_tieusu;
-        private System.Windows.Forms.Label lb_hoten;
+        private System.Windows.Forms.Label lb_Name;
+        private System.Windows.Forms.Label lb_Bio;
+        private System.Windows.Forms.Label lb_Date;
+        private System.Windows.Forms.Label lb_Id;
+        private System.Windows.Forms.TextBox tb_Name;
+        private System.Windows.Forms.TextBox tb_Id;
+        private System.Windows.Forms.TextBox tb_Date;
+        private System.Windows.Forms.RichTextBox rtb_Bio;
+        private Custom_Control.RoundedButton btn_SaveChanges;
     }
 }

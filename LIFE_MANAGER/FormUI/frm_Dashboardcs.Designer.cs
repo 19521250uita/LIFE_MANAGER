@@ -39,10 +39,11 @@ namespace LIFE_MANAGER.FormUI
             this.button1 = new System.Windows.Forms.Button();
             this.lblTitle = new System.Windows.Forms.Label();
             this.panelTitleBar = new System.Windows.Forms.Panel();
-            this.button8 = new System.Windows.Forms.Button();
+            this.btn_Quit = new System.Windows.Forms.Button();
             this.btn_Maximize = new System.Windows.Forms.Button();
             this.bnt_Minimize = new System.Windows.Forms.Button();
             this.btn_Close = new System.Windows.Forms.Button();
+            this.btn_Logout = new System.Windows.Forms.Button();
             this.panelMenu.SuspendLayout();
             this.panelTitleBar.SuspendLayout();
             this.SuspendLayout();
@@ -112,6 +113,7 @@ namespace LIFE_MANAGER.FormUI
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
+            this.panelMenu.Controls.Add(this.btn_Logout);
             this.panelMenu.Controls.Add(this.button5);
             this.panelMenu.Controls.Add(this.button4);
             this.panelMenu.Controls.Add(this.button3);
@@ -165,14 +167,14 @@ namespace LIFE_MANAGER.FormUI
             this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.Location = new System.Drawing.Point(668, 22);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(99, 32);
+            this.lblTitle.Size = new System.Drawing.Size(98, 32);
             this.lblTitle.TabIndex = 3;
             this.lblTitle.Text = "label1";
             // 
             // panelTitleBar
             // 
             this.panelTitleBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
-            this.panelTitleBar.Controls.Add(this.button8);
+            this.panelTitleBar.Controls.Add(this.btn_Quit);
             this.panelTitleBar.Controls.Add(this.btn_Maximize);
             this.panelTitleBar.Controls.Add(this.bnt_Minimize);
             this.panelTitleBar.Controls.Add(this.btn_Close);
@@ -184,20 +186,20 @@ namespace LIFE_MANAGER.FormUI
             this.panelTitleBar.TabIndex = 5;
             this.panelTitleBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PanelTitleBar_MouseDown);
             // 
-            // button8
+            // btn_Quit
             // 
-            this.button8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button8.AutoSize = true;
-            this.button8.FlatAppearance.BorderSize = 0;
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.Location = new System.Drawing.Point(1267, 12);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(30, 30);
-            this.button8.TabIndex = 9;
-            this.button8.Text = "O";
-            this.button8.UseVisualStyleBackColor = true;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
+            this.btn_Quit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Quit.AutoSize = true;
+            this.btn_Quit.FlatAppearance.BorderSize = 0;
+            this.btn_Quit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Quit.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Quit.Location = new System.Drawing.Point(1267, 12);
+            this.btn_Quit.Name = "btn_Quit";
+            this.btn_Quit.Size = new System.Drawing.Size(30, 30);
+            this.btn_Quit.TabIndex = 9;
+            this.btn_Quit.Text = "O";
+            this.btn_Quit.UseVisualStyleBackColor = true;
+            this.btn_Quit.Click += new System.EventHandler(this.btn_Quit_Click);
             // 
             // btn_Maximize
             // 
@@ -241,6 +243,24 @@ namespace LIFE_MANAGER.FormUI
             this.btn_Close.UseVisualStyleBackColor = true;
             this.btn_Close.Click += new System.EventHandler(this.btn_Close_Click);
             // 
+            // btn_Logout
+            // 
+            this.btn_Logout.AutoSize = true;
+            this.btn_Logout.FlatAppearance.BorderSize = 0;
+            this.btn_Logout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Logout.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Logout.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_Logout.Image = ((System.Drawing.Image)(resources.GetObject("btn_Logout.Image")));
+            this.btn_Logout.Location = new System.Drawing.Point(0, 467);
+            this.btn_Logout.Name = "btn_Logout";
+            this.btn_Logout.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
+            this.btn_Logout.Size = new System.Drawing.Size(228, 84);
+            this.btn_Logout.TabIndex = 7;
+            this.btn_Logout.Text = "Logout";
+            this.btn_Logout.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_Logout.UseVisualStyleBackColor = true;
+            this.btn_Logout.Click += new System.EventHandler(this.btn_Logout_Click);
+            // 
             // frm_Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -274,8 +294,9 @@ namespace LIFE_MANAGER.FormUI
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Panel panelTitleBar;
         private System.Windows.Forms.Button btn_Close;
-        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button btn_Quit;
         private System.Windows.Forms.Button btn_Maximize;
         private System.Windows.Forms.Button bnt_Minimize;
+        private System.Windows.Forms.Button btn_Logout;
     }
 }
