@@ -156,6 +156,7 @@ namespace LIFE_MANAGER.FormUI
             this.Controls.Add(this.pictureBox1);
             this.Name = "frm_Profile";
             this.Text = "Profile";
+            this.Load += new System.EventHandler(this.frm_Profile_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

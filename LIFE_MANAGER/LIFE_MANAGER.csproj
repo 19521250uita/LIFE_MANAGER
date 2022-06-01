@@ -104,6 +104,9 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ThemeColor.cs" />
+    <EmbeddedResource Include="FormUI\frm_Chart.resx">
+      <DependentUpon>frm_Chart.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormUI\frm_Dashboardcs.resx">
       <DependentUpon>frm_Dashboardcs.cs</DependentUpon>
     </EmbeddedResource>
@@ -160,6 +163,8 @@
     <Content Include="Resource\image\290119_card_id_identification_identity_profile_icon.png" />
     <Content Include="Resource\image\5120884_dairy_grocery_milk_organic_product_icon.png" />
     <Content Include="Resource\image\chart.png" />
+    <Content Include="Resource\image\dairy1png.png" />
+    <Content Include="Resource\image\formdairy.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

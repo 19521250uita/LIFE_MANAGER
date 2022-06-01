@@ -38,6 +38,7 @@ namespace LIFE_MANAGER.FormUI
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Name = "frm_Setting";
             this.Text = "Setting";
+            this.Load += new System.EventHandler(this.frm_Setting_Load);
             this.ResumeLayout(false);
 
         }

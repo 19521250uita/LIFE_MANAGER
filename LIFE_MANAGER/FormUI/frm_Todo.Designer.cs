@@ -60,6 +60,7 @@ namespace LIFE_MANAGER.FormUI
             this.Controls.Add(this.button1);
             this.Name = "frm_Todo";
             this.Text = "Todo";
+            this.Load += new System.EventHandler(this.frm_Todo_Load);
             this.ResumeLayout(false);
 
         }

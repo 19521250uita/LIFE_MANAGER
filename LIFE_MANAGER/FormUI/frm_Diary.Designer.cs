@@ -29,6 +29,7 @@ namespace LIFE_MANAGER.FormUI
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Diary));
             this.SuspendLayout();
             // 
             // frm_Diary
@@ -36,9 +37,12 @@ namespace LIFE_MANAGER.FormUI
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(835, 481);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(1074, 574);
             this.Name = "frm_Diary";
             this.Text = "Diary";
+            this.Load += new System.EventHandler(this.frm_Diary_Load);
             this.ResumeLayout(false);
 
         }
